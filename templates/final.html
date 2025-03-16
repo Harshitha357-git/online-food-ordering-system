@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .payment-container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-container">
+    <h2>Pay with Card</h2>
+    <input type="text" id="cardholderName" placeholder="Cardholder Name" required>
+    <input type="text" id="cardNumber" placeholder="Card Number" required>
+    <input type="text" id="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+    <input type="number" id="cvv" placeholder="CVV" required>
+    <input type="text" id="mobileNumber" placeholder="Mobile Number" required>
+    <input type="text" id="streetAddress" placeholder="Street Address" required>
+    <input type="text" id="city" placeholder="City" required>
+    <button id="payNowButton">Pay Now</button>
+    <div class="success-message" id="successMessage">
+      <h1>✅ Payment Successful!</h1>
+      <p>🍽️ Order placed successfully.</p>
+      <p>🛵 Your food is on the way.</p>
+      <p>😊 Enjoy your meal!</p>
+    </div>
+  </div>
+
+  <script>
+    // Handle payment process
+    document.getElementById('payNowButton').addEventListener('click', function(event) {
+      event.preventDefault();
+      let inputs = document.querySelectorAll('input[required]');
+      let allFilled = true;
+      inputs.forEach(function(input) {
+        if (!input.value.trim()) {
+          allFilled = false;
+        }
+      });
+
+      if (allFilled) {
+        setTimeout(function() {
+          document.getElementById('successMessage').style.display = 'block';
+          setTimeout(function() {
+            window.location.href = 'cart.html';
+          }, 5000);
+        }, 1000);
+      } else {
+        alert('Please fill in all required fields before proceeding.');
+      }
+    });
+  </script>
+</body>
+</html>

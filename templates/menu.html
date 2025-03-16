@@ -1,0 +1,235 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .menu-buttons button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    .menu-buttons button:hover {
+      background-color: #0056b3;
+    }
+    .menu-section {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .menu-section.active {
+      display: block;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Restaurant Menus</h1>
+
+  <div class="menu-buttons">
+    <button onclick="showMenu('restaurantMenu')">Harshitha's Kitchen</button>
+    <button onclick="showMenu('chefsSpecial')">Chef's Special</button>
+    <button onclick="showMenu('foodCourt')">Food Court</button>
+  </div>
+
+  <div id="restaurantMenu" class="menu-section active">
+    <h2>Harshitha's Kitchen</h2>
+    <div class="menu-item"><span>Paneer Butter Masala</span><span>₹250</span></div>
+    <div class="menu-item"><span>Veg Biryani</span><span>₹180</span></div>
+    <div class="menu-item"><span>Chicken Curry</span><span>₹300</span></div>
+  </div>
+
+  <div id="chefsSpecial" class="menu-section">
+    <h2>Chef's Special</h2>
+    <div class="menu-item"><span>Truffle Pasta</span><span>₹400</span></div>
+    <div class="menu-item"><span>Gourmet Burger</span><span>₹350</span></div>
+    <div class="menu-item"><span>Seafood Platter</span><span>₹600</span></div>
+  </div>
+
+  <div id="foodCourt" class="menu-section">
+    <h2>Food Court</h2>
+    <div class="menu-item"><span>Pizza</span><span>₹220</span></div>
+    <div class="menu-item"><span>Noodles</span><span>₹150</span></div>
+    <div class="menu-item"><span>Ice Cream Sundae</span><span>₹120</span></div>
+  </div>
+
+  <script>
+    function showMenu(menuId) {
+      const menus = document.querySelectorAll('.menu-section');
+      menus.forEach(menu => menu.classList.remove('active'));
+      document.getElementById(menuId).classList.add('active');
+    }
+  </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .menu-buttons button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    .menu-buttons button:hover {
+      background-color: #0056b3;
+    }
+    .menu-section {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .menu-section.active {
+      display: block;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Restaurant Menus</h1>
+
+  <div class="menu-buttons">
+    <button onclick="showMenu('restaurantMenu')">Harshitha's Kitchen</button>
+    <button onclick="showMenu('chefsSpecial')">Chef's Special</button>
+    <button onclick="showMenu('foodCourt')">Food Court</button>
+  </div>
+
+  <div id="restaurantMenu" class="menu-section active">
+    <h2>Harshitha's Kitchen</h2>
+    <div class="menu-item"><span>Paneer Butter Masala</span><span>₹250</span></div>
+    <div class="menu-item"><span>Veg Biryani</span><span>₹180</span></div>
+    <div class="menu-item"><span>Chicken Curry</span><span>₹300</span></div>
+    <div class="menu-item"><span>Gobi Manchurian</span><span>₹200</span></div>
+    <div class="menu-item"><span>Fish Fry</span><span>₹320</span></div>
+    <div class="menu-item"><span>Veg Fried Rice</span><span>₹170</span></div>
+    <div class="menu-item"><span>Chicken 65</span><span>₹250</span></div>
+    <div class="menu-item"><span>Mushroom Curry</span><span>₹220</span></div>
+    <div class="menu-item"><span>Mutton Korma</span><span>₹350</span></div>
+    <div class="menu-item"><span>Veg Spring Rolls</span><span>₹190</span></div>
+    <div class="menu-item"><span>Chicken Lollipop</span><span>₹270</span></div>
+    <div class="menu-item"><span>Chocolate Brownie</span><span>₹150</span></div>
+    <div class="menu-item"><span>Vanilla Ice Cream</span><span>₹120</span></div>
+    <div class="menu-item"><span>Strawberry Milkshake</span><span>₹180</span></div>
+    <div class="menu-item"><span>Butter Naan</span><span>₹50</span></div>
+    <div class="menu-item"><span>Jeera Rice</span><span>₹140</span></div>
+    <div class="menu-item"><span>Egg Curry</span><span>₹250</span></div>
+    <div class="menu-item"><span>Fish Curry</span><span>₹320</span></div>
+    <div class="menu-item"><span>Fruit Salad</span><span>₹150</span></div>
+    <div class="menu-item"><span>Rasgulla</span><span>₹100</span></div>
+  </div>
+
+  <div id="chefsSpecial" class="menu-section">
+    <h2>Chef's Special</h2>
+    <div class="menu-item"><span>Truffle Pasta</span><span>₹400</span></div>
+    <div class="menu-item"><span>Gourmet Burger</span><span>₹350</span></div>
+    <div class="menu-item"><span>Seafood Platter</span><span>₹600</span></div>
+    <div class="menu-item"><span>Chicken Tikka</span><span>₹320</span></div>
+    <div class="menu-item"><span>Lamb Chops</span><span>₹450</span></div>
+    <div class="menu-item"><span>Veg Lasagna</span><span>₹300</span></div>
+    <div class="menu-item"><span>Grilled Salmon</span><span>₹550</span></div>
+    <div class="menu-item"><span>Beef Steak</span><span>₹700</span></div>
+    <div class="menu-item"><span>Veg Kebab</span><span>₹250</span></div>
+    <div class="menu-item"><span>Prawn Masala</span><span>₹500</span></div>
+    <div class="menu-item"><span>Chocolate Lava Cake</span><span>₹220</span></div>
+    <div class="menu-item"><span>Mango Mousse</span><span>₹200</span></div>
+    <div class="menu-item"><span>Ice Cream Sundae</span><span>₹180</span></div>
+    <div class="menu-item"><span>Veg Fried Noodles</span><span>₹250</span></div>
+    <div class="menu-item"><span>Butter Chicken</span><span>₹400</span></div>
+    <div class="menu-item"><span>Paneer Tikka</span><span>₹280</span></div>
+    <div class="menu-item"><span>Fish Fingers</span><span>₹350</span></div>
+    <div class="menu-item"><span>Cheesy Nachos</span><span>₹200</span></div>
+    <div class="menu-item"><span>Fruit Tart</span><span>₹250</span></div>
+    <div class="menu-item"><span>Strawberry Ice Cream</span><span>₹180</span></div>
+  </div>
+
+  <div id="foodCourt" class="menu-section">
+    <h2>Food Court</h2>
+    <div class="menu-item"><span>Pizza</span><span>₹220</span></div>
+    <div class="menu-item"><span>Noodles</span><span>₹150</span></div>
+    <div class="menu-item"><span>Ice Cream Sundae</span><span>₹120</span></div>
+    <div class="menu-item"><span>Veg Burger</span><span>₹180</span></div>
+    <div class="menu-item"><span>Chicken Wrap</span><span>₹250</span></div>
+    <div class="menu-item"><span>French Fries</span><span>₹140</span></div>
+    <div class="menu-item"><span>Veg Momos</span><span>₹200</span></div>
+    <div class="menu-item"><span>Chicken Nuggets</span><span>₹230</span></div>
+    <div class="menu-item"><span>Soft Drinks</span><span>₹80</span></div>
+    <div class="menu-item"><span>Chocolate Shake</span><span>₹160</span></div>
+    <div class="menu-item"><span>Veg Sandwich</span><span>₹150</span></div>
+    <div class="menu-item"><span>Chicken Sandwich</span><span>₹200</span></div>
+    <div class="menu-item"><span>Onion Rings</span><span>₹180</span></div>
+    <div class="menu-item"><span>Paneer Roll</span><span>₹250</span></div>
+    <div class="menu-item"><span>Fish Popcorn</span><span>₹300</span></div>
+    <div class="menu-item"><span>Choco Lava Cake</span><span>₹200</span></div>
+    <div class="menu-item"><span>Vanilla Ice Cream</span><span>₹100</span></div>
+    <div class="menu-item"><span>Mango Shake</span><span>₹150</span></div>
+    <div class="menu-item"><span>Fruit Salad</span><span>₹180</span></div>
+    <div class="menu-item"><span>Mixed Veg Platter</span><span>₹250</span></div>
+  </div>
+
+  <script>
+    function showMenu(menuId) {
+      const menus = document.querySelectorAll('.menu-section');
+      menus.forEach(menu => menu.classList.remove('active'));
+      document.getElementById(menuId).classList.add('active');
+    }
+  </script>
+</body>
+</html>

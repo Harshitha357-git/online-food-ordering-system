@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer login</title>
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+  <div class="container" id="loginContainer">
+    <h2>Customer Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div class="link" onclick="showRegister()">Don't have an account? Register</div>
+    <div class="message" id="loginMessage"></div>
+  </div>
+
+  <div class="container" id="registerContainer" style="display:none;">
+    <h2>Register</h2>
+    <input type="text" id="registerName" placeholder="Full Name">
+    <input type="email" id="registerEmail" placeholder="Email">
+    <input type="password" id="registerPassword" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <div class="link" onclick="showLogin()">Already have an account? Login</div>
+    <div class="message" id="registerMessage"></div>
+  </div>
+
+  <script>
+    function displayMessage(elementId, message, color) {
+      const messageElement = document.getElementById(elementId);
+      messageElement.innerText = message;
+      messageElement.style.backgroundColor = color;
+      messageElement.style.color = 'white';
+      messageElement.style.display = 'block';
+      setTimeout(() => {
+        messageElement.style.display = 'none';
+      }, 2000);
+    }
+
+    function login() {
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+      if (email && password) {
+        displayMessage('loginMessage', '🎉✅  Login Successful! 🍔🥤', '#28a745');
+        setTimeout(() => {
+          window.location.href = 'cart.html'; // Redirect to cart.html after successful login
+        }, 2000);
+      } else {
+        displayMessage('loginMessage', '⚠️ Please fill all fields.', '#dc3545');
+      }
+    }
+
+    function register() {
+      const name = document.getElementById('registerName').value;
+      const email = document.getElementById('registerEmail').value;
+      const password = document.getElementById('registerPassword').value;
+      if (name && email && password) {
+        displayMessage('registerMessage',  '🎊🥳 Profile Created Successfully! 🍕🎂', '#28a745');
+      } else {
+        displayMessage('registerMessage', '⚠️ Please fill all fields.', '#dc3545');
+      }
+    }
+
+    function showRegister() {
+      document.getElementById('loginContainer').style.display = 'none';
+      document.getElementById('registerContainer').style.display = 'block';
+    }
+
+    function showLogin() {
+      document.getElementById('registerContainer').style.display = 'none';
+      document.getElementById('loginContainer').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

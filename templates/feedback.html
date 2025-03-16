@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Harshitha's Food Ordering System</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .feedback-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .rating {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .rating span {
+      font-size: 25px;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .rating span:hover,
+    .rating span.selected {
+      color: #ffcc00;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="feedback-container">
+    <h1>We Value Your Feedback!</h1>
+    <form id="feedbackForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="experience">How was your experience?</label>
+      <select id="experience" required>
+        <option value="">Select...</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+      </select>
+
+      <label>Rate Our Service</label>
+      <div class="rating">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+      </div>
+
+      <label for="comments">Additional Comments</label>
+      <textarea id="comments" rows="4" placeholder="Your suggestions or feedback..."></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+  <script>
+    // Rating functionality
+    const stars = document.querySelectorAll('.rating span');
+    stars.forEach(star => {
+      star.addEventListener('click', function() {
+        stars.forEach(s => s.classList.remove('selected'));
+        this.classList.add('selected');
+      });
+    });
+
+    // Form submission alert
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for your feedback!');
+      this.reset();
+      stars.forEach(star => star.classList.remove('selected'));
+    });
+  </script>
+</body>
+</html>
