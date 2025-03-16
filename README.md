@@ -1,4 +1,4 @@
-### online-food-ordering-system
+# online-food-ordering-system
 
 
 ## This project is a simple and responsive Online Food Ordering System built using HTML, CSS, and JavaScript. It allows users to browse various food categories, select items, customize orders, and place an order seamlessly. 
